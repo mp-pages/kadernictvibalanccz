@@ -1,0 +1,61 @@
+.flower {
+  position: fixed;
+  top: 190px;
+  &.flower--left {
+    background: url("/images/flower--left.png") no-repeat top;
+    height: 308px;
+    width: 378px;
+    background-size: contain;
+    left:0;
+  }
+  &.flower--right {
+    background: url("/images/flower--right.png") no-repeat top;
+    right: 0;
+    height: 248px;
+    width: 348px;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 1200px) {
+  .flower {
+    $coef: 0.7;
+    $move: -10px;
+    &.flower--left {
+      width: 378px * $coef;
+      left: $move;
+    }
+    &.flower--right {
+      width: 348px * $coef;
+      right: $move;
+    }
+  }
+}
+@media (max-width: 850px) {
+  .flower {
+    $coef: 0.5;
+    $move: -30px;
+    &.flower--left {
+      width: 378px * $coef;
+      left: $move;
+    }
+    &.flower--right {
+      width: 348px * $coef;
+      right: $move;
+    }
+  }
+}
+@media (max-width: 750px) {
+  .flower {
+    $coef: 0.4;
+    $move: -30px;
+    &.flower--left {
+      width: 378px * $coef;
+      left: $move;
+    }
+    &.flower--right {
+      width: 348px * $coef;
+      right: $move;
+    }
+  }
+}
